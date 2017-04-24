@@ -1,0 +1,60 @@
+﻿@model IEnumerable<GiraffRentBoat.Models.Booking>
+
+@{
+    ViewBag.Title = "Bokning";
+}
+
+<h2>@ViewBag.Title</h2>
+@*<p>
+    @Html.ActionLink("Lägg till bokning", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Boat.BoatName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Personnummer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Active)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Boat.BoatName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Personnummer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Active)
+        </td>
+        <td>
+            @Html.ActionLink("Radigera", "Edit", new { id=item.BookingId }) |
+            @Html.ActionLink("Detaljer", "Details", new { id=item.BookingId }) |
+            @if (User.Identity.IsAuthenticated)
+            {
+            @Html.ActionLink("Ta bort", "Delete", new { id=item.BookingId, boatId= item.BoatId })
+            }
+            @Html.ActionLink("Boka båt", "Create", "Bookings", new { active = item.Active }, null)
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,57 @@
+﻿@model GiraffRentBoat.Models.Reciept
+
+
+@{
+    ViewBag.Title = "Kvitto";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>Booking</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BoatNameReciept)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BoatNameReciept)
+        </dd>
+
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.BookingNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookingNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RecieptDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecieptDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Tillbaka till lista", "Index")
+</p>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiraffRentBoat", "GiraffRentBoat\GiraffRentBoat.csproj", "{6E278507-25E5-4D0C-86BD-F9A8D608150D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiraffRentBoat.Tests", "GiraffRentBoat.Tests\GiraffRentBoat.Tests.csproj", "{ACE82328-A478-4C0D-87C2-F920128A0A72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E278507-25E5-4D0C-86BD-F9A8D608150D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E278507-25E5-4D0C-86BD-F9A8D608150D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E278507-25E5-4D0C-86BD-F9A8D608150D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E278507-25E5-4D0C-86BD-F9A8D608150D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACE82328-A478-4C0D-87C2-F920128A0A72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACE82328-A478-4C0D-87C2-F920128A0A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACE82328-A478-4C0D-87C2-F920128A0A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACE82328-A478-4C0D-87C2-F920128A0A72}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

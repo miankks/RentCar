@@ -1,0 +1,56 @@
+﻿@model IEnumerable<GiraffRentBoat.Models.Boat>
+@using GiraffRentBoat.Models
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BoatName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookingNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoatActive)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.BoatType)
+        </th>*@
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoatName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookingNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoatActive)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.BoatType)
+        </td>*@
+        
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @if(User.Identity.IsAuthenticated){ 
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id }) } |
+            @Html.ActionLink("Boka båt", "Create", "Bookings",new { active = item.BoatActive, boatid = item.Id }, null)
+        </td>
+    </tr>
+}
+
+</table>
